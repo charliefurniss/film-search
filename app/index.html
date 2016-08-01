@@ -10,20 +10,44 @@
     </head>
     <body>
         <div id="app">
-            
-            <input id="search-input" type="text" placeholder="Search for anything right here, right now...">
-            
-            <input id="search-submit" type="submit" value="SEARCH">
 
-            <span>sort:</span>
-            <input id="title-input" type="radio" name="sort-group" value="TITLE" checked="">
-            <label for="title-input">Title</label>,
-            
-            <input id="date-input" type="radio" name="sort-group" value="DATE">
-            <label for="date-input">Date</label>
+            <div id="header">
+                <img id="header-logo" src="images/OMDb-logo.png" />
+                <h6 id="header-title">OMDb</h6>
+            </div>
 
-            <ul class="film-list">
-            </ul>
+            <div id="title-container">
+                <h1>OMDb</h1>
+                <h3>The Open <span id="green-highlight">Movie</span> Database.</h3>
+            </div>
+
+            <div id="search-area">
+            
+                <input id="search-input" type="text" placeholder="Search for anything right here, right now...">
+                <input id="search-submit" type="submit" value="SEARCH">
+
+            </div>
+
+            <div id="results-area">
+
+                <div id="results-header">
+
+                    <h2>Results</h2>
+
+                    <span>SORT BY</span>
+
+                    <input id="title-input" type="radio" name="sort-group" value="TITLE" checked="">
+                    <label for="title-input">TITLE</label>
+                    
+                    <input id="date-input" type="radio" name="sort-group" value="DATE">
+                    <label for="date-input">RELEASE YEAR</label>
+
+                </div>
+
+                <ul class="film-list">
+                </ul>
+
+            </div>
 
         </div>
 
