@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-        <div id="main-container">
+
+        <div id="top-container">
 
             <div id="header">
                 <img class="header-content" id="header-logo" src="images/OMDb-logo.png" />
@@ -25,30 +26,30 @@
                 </div>
             </div>
 
-            <div id="results-area">
+        </div>
+    
+        <div id="results-container">
 
-                <div id="results-header">
+            <div id="results-header">
 
-                    <h2 class="results-header-content">Results</h2>
+                <h2 class="results-header-content">Results</h2>
 
-                    <div id="sort-container">
+                <div id="sort-container">
 
-                        <p class="results-header-content">SORT BY</p>
+                    <p class="results-header-content">SORT BY</p>
 
-                        <input class="results-header-content" id="title-input" type="radio" name="sort-group" value="TITLE" checked="">
-                        <label for="title-input">TITLE</label>
-                        
-                        <input class="results-header-content" id="date-input" type="radio" name="sort-group" value="DATE">
-                        <label for="date-input">RELEASE YEAR</label>
-
-                    </div>
+                    <input class="results-header-content" id="title-input" type="radio" name="sort-group" value="TITLE" checked="">
+                    <label for="title-input">TITLE</label>
+                    
+                    <input class="results-header-content" id="date-input" type="radio" name="sort-group" value="DATE">
+                    <label for="date-input">RELEASE YEAR</label>
 
                 </div>
 
-                <ul class="film-list">
-                </ul>
-
             </div>
+
+            <ul class="film-list">
+            </ul>
 
         </div>
 

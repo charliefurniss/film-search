@@ -1,15 +1,24 @@
 body {
-
-	margin: 40px;
     
 }
-
-
 
 .header-content, 
 .results-header-content {
 
 	display: inline;
+
+}
+
+#results-container {
+
+	background-color: #01D2BD;
+
+}
+
+#results-container,
+#top-container {
+
+	padding: 40px;
 
 }
 
@@ -22,5 +31,11 @@ body {
 #title-container {
 
 	text-align: center;
+
+}
+
+#top-container {
+
+	background-color: #121C25;
 
 }
