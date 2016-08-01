@@ -1,5 +1,24 @@
+@font-face {
+    font-family: GT-Walsheim-Bold;
+    src: url(../fonts/GT-Walsheim-Bold.woff);
+}
+
+@font-face {
+    font-family: GT-Walsheim-Light;
+    src: url(../fonts/GT-Walsheim-Light.woff);
+}
+
+@font-face {
+    font-family: GT-Walsheim-Medium;
+    src: url(../fonts/gt-walsheim-medium-web.woff);
+}
+
+
 body {
     
+    font-family: GT-Walsheim-Medium;
+	color: #FFFFFF;
+
 }
 
 .header-content, 
@@ -25,6 +44,18 @@ body {
 #sort-container {
 
 	float: right;
+
+}
+
+#strapline {
+
+	font-family: GT-Walsheim-Light;
+	
+}
+
+#title {
+
+	font-family: GT-Walsheim-Bold;
 
 }
 
