@@ -2,18 +2,18 @@
     <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>app</title>
-        <meta name="description" content="">
+        <title>OMDb The Open Movie Database</title>
+        <meta name="description" content="OMDb The Open Movie Database">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-        <div id="app">
+        <div id="main-container">
 
             <div id="header">
-                <img id="header-logo" src="images/OMDb-logo.png" />
-                <h6 id="header-title">OMDb</h6>
+                <img class="header-content" id="header-logo" src="images/OMDb-logo.png" />
+                <h6 class="header-content" id="header-title">OMDb</h6>
             </div>
 
             <div id="title-container">
@@ -29,15 +29,19 @@
 
                 <div id="results-header">
 
-                    <h2>Results</h2>
+                    <h2 class="results-header-content">Results</h2>
 
-                    <span>SORT BY</span>
+                    <div id="sort-container">
 
-                    <input id="title-input" type="radio" name="sort-group" value="TITLE" checked="">
-                    <label for="title-input">TITLE</label>
-                    
-                    <input id="date-input" type="radio" name="sort-group" value="DATE">
-                    <label for="date-input">RELEASE YEAR</label>
+                        <p class="results-header-content">SORT BY</p>
+
+                        <input class="results-header-content" id="title-input" type="radio" name="sort-group" value="TITLE" checked="">
+                        <label for="title-input">TITLE</label>
+                        
+                        <input class="results-header-content" id="date-input" type="radio" name="sort-group" value="DATE">
+                        <label for="date-input">RELEASE YEAR</label>
+
+                    </div>
 
                 </div>
 

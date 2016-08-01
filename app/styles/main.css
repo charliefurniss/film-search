@@ -4,6 +4,21 @@ body {
     
 }
 
+
+
+.header-content, 
+.results-header-content {
+
+	display: inline;
+
+}
+
+#sort-container {
+
+	float: right;
+
+}
+
 #title-container {
 
 	text-align: center;
