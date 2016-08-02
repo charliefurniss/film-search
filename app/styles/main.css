@@ -16,15 +16,70 @@
 
 body {
     
-    font-family: GT-Walsheim-Medium;
+    font-family: GT-Walsheim-Light;
 	color: #FFFFFF;
 
 }
 
 .header-content, 
+#results-head, 
 .results-header-content {
 
 	display: inline;
+
+}
+
+#header-logo {
+
+	width: 50px;
+	height: 42px;
+
+}
+
+#header-title {
+
+	font-size: 18px;
+	font-family: GT-Walsheim-Medium;
+	vertical-align: middle;
+	margin-left: 10px;
+
+}
+
+input[id="search-input"] {
+
+	font-family: GT-Walsheim-Light;
+	font-size: 20px;
+	width: 500px;
+	padding: 15px 60px;
+	margin-right: -5px;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+
+}
+
+input[id="search-input"]:focus {
+
+	outline: none;
+
+}
+
+input[id="search-input"],
+input[id="search-submit"] {
+
+	background-color: #FFFFFF;
+	border: none;
+
+}
+
+input[id="search-submit"] {
+
+	font-family: GT-Walsheim-Medium;
+	font-size: 20px;
+	width: 150px;
+	padding: 15px 30px;
+	color: #3F4B56;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
 
 }
 
@@ -41,21 +96,54 @@ body {
 
 }
 
+#results-head {
+
+	font-size: 34px;
+
+}
+
+.results-header-content {
+
+	font-size: 11px;
+
+}
+
+.search { 
+	
+	margin: 3px; 
+	background: url('../images/search-icon.png') no-repeat 34px 22px; 
+
+}
+
+#search-border {
+
+	border-left: 1px solid #AEBAC8;
+
+}
+
 #sort-container {
 
 	float: right;
 
 }
 
+#strap-highlight {
+
+	color: #01D2BD;
+
+}
+
 #strapline {
 
-	font-family: GT-Walsheim-Light;
-	
+	font-size: 30px;
+	color: #AEBAC8;
+
 }
 
 #title {
 
 	font-family: GT-Walsheim-Bold;
+	font-size: 45px;
 
 }
 

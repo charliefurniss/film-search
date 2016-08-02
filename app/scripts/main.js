@@ -56,6 +56,7 @@ $(document).ready(function () {
         $('.film-list').empty();
 
         $.each(datas, function(index, data) {
+            console.log(data);
             $('.film-list').append('<li>'+ data.Title +'</li>')
             $('.film-list').find('li').eq(index).append('<div style="display: none;">Year: ' + data.Year + ', imdbID: '+ data.imdbID +'<img src="' + data.Poster + '"/> ' + '</div>');
         });
