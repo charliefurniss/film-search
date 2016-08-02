@@ -105,6 +105,7 @@ input[id="search-submit"] {
 .results-header-content {
 
 	font-size: 11px;
+	font-family: GT-Walsheim-Bold;
 
 }
 
@@ -124,6 +125,30 @@ input[id="search-submit"] {
 #sort-container {
 
 	float: right;
+
+}
+
+.sort-active {
+
+/*	font-family: GT-Walsheim-Medium;
+*/	padding: 10px;
+	margin-left: 10px;
+	border: none;
+	color: #FFFFFF;
+	background-color: #019A8B;
+	border-radius: 3px;
+
+}
+
+.sort-button {
+
+/*	font-family: GT-Walsheim-Medium;
+*/	padding: 10px;
+	margin-left: 10px;
+	border: none;
+	color: #121C25;
+	background-color: #FFFFFF;
+	border-radius: 3px;
 
 }
 
