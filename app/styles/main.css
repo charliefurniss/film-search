@@ -52,7 +52,7 @@ body {
 .film-listing {
 
 	list-style: none;
-	margin-top: 20px;
+	margin-top: 40px;
 
 }
 
@@ -115,6 +115,12 @@ body {
 	font-family: GT-Walsheim-Medium;
 	vertical-align: middle;
 	margin-left: 10px;
+
+}
+
+#header {
+
+	margin-bottom: 90px;
 
 }
 
@@ -181,7 +187,7 @@ input[id="search-submit"] {
 
 #results-header {
 
-	padding: 0 15px;
+	padding: 40px 15px 10px 15px;
 
 }
 
@@ -196,6 +202,14 @@ input[id="search-submit"] {
 	
 	margin: 3px; 
 	background: url('../images/search-icon.png') no-repeat 34px 22px; 
+
+}
+
+#search-area,
+#title-container {
+
+	text-align: center;
+	margin-bottom: 60px;
 
 }
 
@@ -250,12 +264,6 @@ input[id="search-submit"] {
 
 	font-family: GT-Walsheim-Bold;
 	font-size: 45px;
-
-}
-
-#title-container {
-
-	text-align: center;
 
 }
 
