@@ -77,6 +77,8 @@ $(document).ready(function () {
     function render() {
         datas && datas.length && sortDatas();
 
+        console.log(datas);
+
         $('.film-list').empty();
 
         // $('.film-list li').on('click', function() {
@@ -103,6 +105,10 @@ $(document).ready(function () {
 
             $('.film-list').append('<li class="film-listing col-md-4"></li>')
             $('.film-list').find('li').eq(index).append('<div class="film-container"><div class="film-inner row">' + ' <div class="col-md-3"><img class="film-poster" alt="No image" src="' + data.Poster + '"/></div> <div class="film-info col-md-9"><div class="film-type ' + typeClass + '">• ' + data.Type + '</div><div class="film-title">' + data.Title + '</div><div class="film-year">' + data.Year + '</div></div></div></div>');
+
+            $('.film-list li').on('click', function() {
+                $(this).find('div.film-info').empty().append('<div class="film-imdbID">IMDB ID: ' + data.imdbID + '</div>');
+            });
         });
     }
 });
