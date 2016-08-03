@@ -76,14 +76,25 @@ $(document).ready(function () {
         // });
 
         $.each(datas, function(index, data) {
-            // console.log(data);
-
-            if(data.Type == 'movie') {
-                data.Type = 'film';
+            var typeClass = '';
+            switch (data.Type) {
+                case 'movie':
+                    data.Type = 'film';
+                    typeClass = 'type-movie';
+                    break;
+                case 'series':
+                typeClass = 'type-series';
+                    break;
+                case 'game':
+                typeClass = 'type-game';
+                    break;    
+                default:
+                    sortType = 'Title';
+                    break;
             }
 
             $('.film-list').append('<li class="film-listing col-md-4"></li>')
-            $('.film-list').find('li').eq(index).append('<div class="film-container"><div class="film-inner row">'+ ' <div class="col-md-3"><img class="film-poster" alt="No image" src="' + data.Poster + '"/></div> <div class="film-info col-md-9"><div class="film-type">• ' + data.Type + '</div><div class="film-title">' + data.Title + '</div><div class="film-year">' + data.Year + '</div></div></div></div>');
+            $('.film-list').find('li').eq(index).append('<div class="film-container"><div class="film-inner row">' + ' <div class="col-md-3"><img class="film-poster" alt="No image" src="' + data.Poster + '"/></div> <div class="film-info col-md-9"><div class="film-type ' + typeClass + '">• ' + data.Type + '</div><div class="film-title">' + data.Title + '</div><div class="film-year">' + data.Year + '</div></div></div></div>');
         });
     }
 });

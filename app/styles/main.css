@@ -82,8 +82,8 @@ body {
 
 .film-type {
 
-	color: #88D1Ef;
 	font-size: 11px;
+	text-transform: uppercase;
 
 }
 
@@ -263,5 +263,23 @@ input[id="search-submit"] {
 
 	background-color: #121C25;
 	padding: 40px;
+
+}
+
+.type-game {
+
+	color: #019A8B;
+
+}
+
+.type-movie {
+
+	color: #88D1Ef;
+
+}
+
+.type-series {
+
+	color: #ED164F;
 
 }
