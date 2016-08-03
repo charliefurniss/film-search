@@ -23,17 +23,32 @@ body {
 
 .film-container {
 
-	background-color: #FFFFFF;
 	color: black;
 	border-radius: 3px;
+
+}
+
+.film-container,
+#search-input,
+#search-submit,
+.sort-button {
+
+	background-color: #FFFFFF;
 
 }
 
 .film-info {
 
 	vertical-align: top;
-	font-family: GT-Walsheim-Medium;
 	overflow: auto;
+
+}
+
+.film-info,
+#header-title,
+#search-submit {
+
+	font-family: GT-Walsheim-Medium;
 
 }
 
@@ -75,7 +90,6 @@ body {
 .film-title,
 .film-year {
 
-	display: block;
 	margin-top: 3px;
 
 }
@@ -89,8 +103,15 @@ body {
 
 .film-year {
 
-	color: #AEBAC8;
 	font-size: 11px;
+
+}
+
+.film-year,
+#search-input,
+#strapline {
+
+	color: #AEBAC8;
 
 }
 
@@ -112,7 +133,6 @@ body {
 #header-title {
 
 	font-size: 18px;
-	font-family: GT-Walsheim-Medium;
 	vertical-align: middle;
 	margin-left: 10px;
 
@@ -124,49 +144,11 @@ body {
 
 }
 
-input[type="text"] {
-
-	color: #AEBAC8;
-
-}
-
-input[id="search-input"] {
-
-	font-family: GT-Walsheim-Light;
-	font-size: 20px;
-	width: 500px;
-	padding: 15px 60px;
-	margin-right: -5px;
-	border-top-left-radius: 50px;
-	border-bottom-left-radius: 50px;
-
-}
-
 input[type="text"]:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus {
 
 	outline: none;
-
-}
-
-input[id="search-input"],
-input[id="search-submit"] {
-
-	background-color: #FFFFFF;
-	border: none;
-
-}
-
-input[id="search-submit"] {
-
-	font-family: GT-Walsheim-Medium;
-	font-size: 20px;
-	width: 150px;
-	padding: 15px 30px;
-	color: #3F4B56;
-	border-top-right-radius: 50px;
-	border-bottom-right-radius: 50px;
 
 }
 
@@ -181,7 +163,6 @@ input[id="search-submit"] {
 #results-head {
 
 	font-size: 34px;
-	font-family: GT-Walsheim-Light;
 
 }
 
@@ -194,6 +175,12 @@ input[id="search-submit"] {
 .results-header-content {
 
 	font-size: 11px;
+
+}
+
+.results-header-content,
+#title {
+
 	font-family: GT-Walsheim-Bold;
 
 }
@@ -219,6 +206,34 @@ input[id="search-submit"] {
 
 }
 
+#search-input {
+
+	width: 500px;
+	padding: 15px 60px;
+	margin-right: -5px;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+
+}
+
+#search-input,
+#search-submit {
+
+	border: none;
+	font-size: 20px;
+
+}
+
+#search-submit {
+
+	width: 150px;
+	padding: 15px 30px;
+	color: #3F4B56;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+
+}
+
 #sort-container {
 
 	float: right;
@@ -227,23 +242,23 @@ input[id="search-submit"] {
 
 .sort-active {
 
+	background-color: #019A8B;
+
+}
+
+.sort-active,
+.sort-button {
+
 	padding: 10px;
 	margin-left: 10px;
 	border: none;
-	color: #FFFFFF;
-	background-color: #019A8B;
 	border-radius: 3px;
 
 }
 
 .sort-button {
 
-	padding: 10px;
-	margin-left: 10px;
-	border: none;
 	color: #121C25;
-	background-color: #FFFFFF;
-	border-radius: 3px;
 
 }
 
@@ -256,13 +271,11 @@ input[id="search-submit"] {
 #strapline {
 
 	font-size: 30px;
-	color: #AEBAC8;
 
 }
 
 #title {
 
-	font-family: GT-Walsheim-Bold;
 	font-size: 45px;
 
 }
