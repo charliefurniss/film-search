@@ -5,8 +5,16 @@ $(document).ready(function () {
     var passiveId = 'year';
     var datas = [];
 
-    $('#search-input').on('input', function(e) {
-        $.ajax('http://www.omdbapi.com/?s='+ e.currentTarget.value).done(function(_datas) {
+    $('#search-form').submit(function(e) {
+        e.preventDefault();
+
+        var $inputs = $('#search-form :input#search-input');
+        var value = '';
+        $inputs.each(function() {
+            value = $(this).val();
+        });
+
+        $.ajax('http://www.omdbapi.com/?s='+ value).done(function(_datas) {
             datas = _datas.Search;
             render();
         });
