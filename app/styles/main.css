@@ -136,7 +136,9 @@ input[id="search-input"] {
 
 }
 
-input[id="search-input"]:focus {
+input[type="text"]:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus {
 
 	outline: none;
 
@@ -173,6 +175,7 @@ input[id="search-submit"] {
 #results-head {
 
 	font-size: 34px;
+	font-family: GT-Walsheim-Light;
 
 }
 
@@ -210,8 +213,7 @@ input[id="search-submit"] {
 
 .sort-active {
 
-/*	font-family: GT-Walsheim-Medium;
-*/	padding: 10px;
+	padding: 10px;
 	margin-left: 10px;
 	border: none;
 	color: #FFFFFF;
@@ -222,8 +224,7 @@ input[id="search-submit"] {
 
 .sort-button {
 
-/*	font-family: GT-Walsheim-Medium;
-*/	padding: 10px;
+	padding: 10px;
 	margin-left: 10px;
 	border: none;
 	color: #121C25;
