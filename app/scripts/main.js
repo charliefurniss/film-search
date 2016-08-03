@@ -55,14 +55,19 @@ $(document).ready(function () {
 
         $('.film-list').empty();
 
+        // $.each(datas, function(index, data) {
+        //     $('.film-list').append('<li>'+ data.Title +'</li>')
+        //     $('.film-list').find('li').eq(index).append('<div style="display: none;">Year: ' + data.Year + ', imdbID: '+ data.imdbID +'<img src="' + data.Poster + '"/> ' + '</div>');
+        // });
+
+        // $('.film-list li').on('click', function() {
+        //     $(this).find('div').slideToggle();
+        // });
+
         $.each(datas, function(index, data) {
             console.log(data);
-            $('.film-list').append('<li>'+ data.Title +'</li>')
-            $('.film-list').find('li').eq(index).append('<div style="display: none;">Year: ' + data.Year + ', imdbID: '+ data.imdbID +'<img src="' + data.Poster + '"/> ' + '</div>');
-        });
-
-        $('.film-list li').on('click', function() {
-            $(this).find('div').slideToggle();
+            $('.film-list').append('<li class="film-listing col-md-4"></li>')
+            $('.film-list').find('li').eq(index).append('<div class="film-container"><div class="film-inner row">'+ ' <div class="col-md-3"><img class="film-poster" src="' + data.Poster + '"/></div> <div class="film-info col-md-9"><div class="film-type">• ' + data.Type + '</div><div class="film-title">' + data.Title + '</div><div class="film-year">' + data.Year + '</div></div></div></div>');
         });
     }
 });

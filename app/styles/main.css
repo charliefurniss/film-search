@@ -21,6 +21,79 @@ body {
 
 }
 
+.film-container {
+
+	background-color: #FFFFFF;
+	color: black;
+	border-radius: 3px;
+
+}
+
+.film-info {
+
+	vertical-align: top;
+	font-family: GT-Walsheim-Medium;
+	overflow: auto;
+
+}
+
+.film-inner {
+	
+	padding: 15px;
+
+}
+
+.film-list {
+
+	padding: 0;
+
+}
+
+.film-listing {
+
+	list-style: none;
+	margin-top: 20px;
+
+}
+
+.film-poster {
+
+	width: 65px;
+	height: 100px;
+
+}
+
+.film-title {
+
+	color: #3F4B56;
+	font-size: 16px;
+	overflow: auto;
+	width: 100%;
+
+}
+
+.film-title,
+.film-year {
+
+	display: block;
+	margin-top: 3px;
+
+}
+
+.film-type {
+
+	color: #88D1Ef;
+	font-size: 11px;
+
+}
+
+.film-year {
+
+	color: #AEBAC8;
+	font-size: 11px;
+
+}
+
 .header-content, 
 #results-head, 
 .results-header-content {
@@ -42,6 +115,12 @@ body {
 	font-family: GT-Walsheim-Medium;
 	vertical-align: middle;
 	margin-left: 10px;
+
+}
+
+input[type="text"] {
+
+	color: #AEBAC8;
 
 }
 
@@ -86,19 +165,20 @@ input[id="search-submit"] {
 #results-container {
 
 	background-color: #01D2BD;
-
-}
-
-#results-container,
-#top-container {
-
-	padding: 40px;
+	padding: 25px;
+	overflow: scroll;
 
 }
 
 #results-head {
 
 	font-size: 34px;
+
+}
+
+#results-header {
+
+	padding: 0 15px;
 
 }
 
@@ -181,5 +261,6 @@ input[id="search-submit"] {
 #top-container {
 
 	background-color: #121C25;
+	padding: 40px;
 
 }
