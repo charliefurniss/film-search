@@ -127,13 +127,16 @@ $(document).ready(function () {
                 typeClass = 'type-movie';
                 break;
             case 'series':
-            typeClass = 'type-series';
+                dataType = 'series';
+                typeClass = 'type-series';
                 break;
             case 'game':
-            typeClass = 'type-game';
+                dataType = 'game';
+                typeClass = 'type-game';
                 break;    
             default:
-                sortType = 'Title';
+                dataType = 'film';
+                typeClass = 'type-movie';
                 break;
         }
     }
