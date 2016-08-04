@@ -32,3 +32,7 @@ Although working with HTML in the JS files is not ideal, I felt that it was a re
 
 The brief recommended that users should be able to click on the film info that was initially displayed to see more detail. Given that the design included all the available data except the IMDB ID, I felt it wasn't worth asking the user to perform an additional action for this small benefit. So I included the IMDB ID on the card with the other data from the start.
 
+
+## Planning
+
+I used Trello to track user stories/bugs for this project: https://trello.com/b/VHAw6qB6/neverbland-test. 
