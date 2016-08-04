@@ -97,6 +97,7 @@ body {
 
 }
 
+.film-imdbID,
 .film-title,
 .film-year {
 
@@ -104,19 +105,27 @@ body {
 
 }
 
+.film-imdbID,
+.film-type {
+
+	text-transform: uppercase;
+	
+}
+
 .film-type {
 
 	font-size: 11px;
-	text-transform: uppercase;
 
 }
 
+.film-imdbID,
 .film-year {
 
 	font-size: 11px;
 
 }
 
+.film-imdbID,
 .film-year,
 #search-input,
 #strapline {
