@@ -162,7 +162,14 @@ input[type="submit"]:focus {
 
 }
 
-#results-container {
+#no-results-head {
+
+	text-align: center;
+
+}
+
+#results-container, 
+#no-results-container {
 
 	background-color: #01D2BD;
 	padding: 25px 25px 40px 25px;
@@ -177,7 +184,8 @@ input[type="submit"]:focus {
 
 }
 
-#results-header {
+#results-header,
+#no-results-header {
 
 	padding: 40px 15px 10px 15px;
 
@@ -361,13 +369,15 @@ input[type="submit"]:focus {
 
 	}
 
-	#results-head {
+	#results-head,
+	#no-results-head {
 
 	    font-size: 24px;
 	
 	}
 
-	#results-header {
+	#results-header,
+	#no-results-header {
 
 		padding-top: 25px;
 
