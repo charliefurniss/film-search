@@ -1,42 +1,49 @@
 $(document).ready(function () {
 
-    //reduces size of placeholder text in form on small screens 
-    $(window).resize(function () {
-        if ($(window).width() < 786) {
-            $('input#search-input').attr('placeholder', 'Search for anything...');
-        } else {
-            $('input#search-input').attr('placeholder', 'Search for anything right here, right now...');
-        }
-    }).resize();
-    
     var sortType = 'TITLE';
     var activeId = 'title';
     var passiveId = 'year';
     var datas = [];
+    var typeClass = '';
+    var dataType = '';
 
-    $('#search-form').submit(function(e) {
-        e.preventDefault();
+    setInputPlaceholder();
+    setUpSearchForm();
+    setUpSortButtons();
+    
+    function setUpSearchForm(){
+        $('#search-form').submit(function(e) {
+            e.preventDefault();
 
-        //retrieves data from form after button click
-        var $inputs = $('#search-form :input#search-input');
-        var value = '';
-        $inputs.each(function() {
-            value = $(this).val();
+            //retrieves data from form after button click
+            var $inputs = $('#search-form :input#search-input');
+            var value = '';
+            $inputs.each(function() {
+                value = $(this).val();
+            });
+
+            //call to API using string from the form
+            $.ajax('http://www.omdbapi.com/?s='+ value)
+                .done(function(_datas) {
+                    //stores data from search in datas variable
+                    datas = _datas.Search;
+                    render();
+            });
         });
 
-        //call to API using string from the form
-        $.ajax('http://www.omdbapi.com/?s='+ value)
-            .done(function(_datas) {
-                //stores data from search in datas variable
-                datas = _datas.Search;
-                render();
+    }
+    
+    function setUpSortButtons(){
+        //listens for click on sort buttons and creates values for relevant variables accordingly
+        $('#title-input, #date-input').on('click', function(e) {
+            setSortVariables(e.currentTarget.value);
+            toggleColour(e);
+            render();
         });
-    });
+    }
 
-    //listens for click on sort buttons and creates values for relevant variables accordingly
-    $('#title-input, #date-input').on('click', function(e) {
-        
-        switch (e.currentTarget.value) {
+    function setSortVariables(value){
+        switch (value) {
             case 'TITLE':
                 sortType = 'TITLE';
                 activeId = 'title';
@@ -53,10 +60,7 @@ $(document).ready(function () {
                 passiveId = 'date';
                 break;
         }
-
-        toggleColour(e);
-        render();
-    });
+    }
 
     //changes colour of sort buttons according to which is active using value of activeID/passiveID set when sort buttons are clicked
     function toggleColour(e) {
@@ -91,46 +95,45 @@ $(document).ready(function () {
 
     function render() {
         datas && datas.length && sortDatas();
-
+        
         $('.film-list').empty();
-
+        
         var results = null;
 
         //displays no results message or results depending on result of search
         if (!datas) {
             results = false;
             
-            showResults(results);
-        
+            showResults(results);    
         } else {
             results = true;         
             
             //iterates through results of search and creates HTML and relevant content
-            $.each(datas, function(index, data) {
-                var typeClass = '';
-                var dataType = '';
-                //creates correct content and class according to value of data.Type
-                switch (data.Type) {
-                    case 'movie':
-                        dataType = 'film';
-                        typeClass = 'type-movie';
-                        break;
-                    case 'series':
-                    typeClass = 'type-series';
-                        break;
-                    case 'game':
-                    typeClass = 'type-game';
-                        break;    
-                    default:
-                        sortType = 'Title';
-                        break;
-                }
-
+            $.each(datas, function(index, data) { 
+                setDataType(data.Type);
                 createHTML(index, data, dataType, typeClass)
             });
-
+            
             showResults(results);
+        }
+    }
 
+    function setDataType(type){
+        //creates correct content and class according to value of data.Type
+        switch (type) {
+            case 'movie':
+                dataType = 'film';
+                typeClass = 'type-movie';
+                break;
+            case 'series':
+            typeClass = 'type-series';
+                break;
+            case 'game':
+            typeClass = 'type-game';
+                break;    
+            default:
+                sortType = 'Title';
+                break;
         }
     }
 
@@ -149,4 +152,16 @@ $(document).ready(function () {
             $('#no-results-container').slideDown("slow");
         }   
     }
+
+    function setInputPlaceholder(){
+        //reduces size of placeholder text in form on small screens 
+        $(window).resize(function () {
+            if ($(window).width() < 786) {
+                $('input#search-input').attr('placeholder', 'Search for anything...');
+            } else {
+                $('input#search-input').attr('placeholder', 'Search for anything right here, right now...');
+            }
+        }).resize();
+    }
+    
 });
