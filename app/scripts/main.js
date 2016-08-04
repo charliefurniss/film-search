@@ -105,7 +105,7 @@ $(document).ready(function () {
         if (!datas) {
             results = false;
             
-            showResults(results);    
+            content.showResults(results);    
         } else {
             results = true;         
             
@@ -115,7 +115,7 @@ $(document).ready(function () {
                 content.createHTML(index, data, dataType, typeClass)
             });
             
-            showResults(results);
+            content.showResults(results);
         }
     }
 
@@ -136,17 +136,6 @@ $(document).ready(function () {
                 sortType = 'Title';
                 break;
         }
-    }
-
-    //shows/hides relevant HTML depending on whether or not any data came back from the search
-    function showResults(results) {
-        if (results) {
-            $('#no-results-container').hide();
-            $('#results-container').slideDown("slow"); 
-        } else {
-            $('#results-container').hide();
-            $('#no-results-container').slideDown("slow");
-        }   
     }
 
     function setInputPlaceholder(){
