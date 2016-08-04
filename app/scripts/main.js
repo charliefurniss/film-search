@@ -7,6 +7,8 @@ $(document).ready(function () {
     var typeClass = '';
     var dataType = '';
 
+    var content = new Content();
+
     setInputPlaceholder();
     setUpSearchForm();
     setUpSortButtons();
@@ -30,7 +32,6 @@ $(document).ready(function () {
                     render();
             });
         });
-
     }
     
     function setUpSortButtons(){
@@ -111,7 +112,7 @@ $(document).ready(function () {
             //iterates through results of search and creates HTML and relevant content
             $.each(datas, function(index, data) { 
                 setDataType(data.Type);
-                createHTML(index, data, dataType, typeClass)
+                content.createHTML(index, data, dataType, typeClass)
             });
             
             showResults(results);
@@ -135,11 +136,6 @@ $(document).ready(function () {
                 sortType = 'Title';
                 break;
         }
-    }
-
-    function createHTML(index, data, dataType, typeClass) {
-        $('.film-list').append('<li class="film-listing col-xs-12 col-sm-6 col-md-4"></li>')
-        $('.film-list').find('li').eq(index).append('<div class="film-container"><div class="film-inner row">' + ' <div class="col-xs-3"><img class="film-poster" alt="No image" src="' + data.Poster + '"/></div> <div class="film-info col-xs-9"><div class="film-type ' + typeClass + '">• ' + dataType + '</div><div class="film-title">' + data.Title + '</div><div class="film-year">' + data.Year + '</div><div class="film-imdbID">IMDB ' + data.imdbID + '</div></div></div></div>');
     }
 
     //shows/hides relevant HTML depending on whether or not any data came back from the search
