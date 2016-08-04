@@ -1,4 +1,12 @@
 $(document).ready(function () {
+
+    $(window).resize(function () { //put your code in window.resize so that it runs when ever window is resized
+        if ($(window).width() < 786) {
+            $('input#search-input').attr('placeholder', 'Search for anything...');
+        } else {
+            $('input#search-input').attr('placeholder', 'Search for anything right here, right now...');
+        }
+    }).resize();
     
     var sortType = 'TITLE';
     var activeId = 'title';

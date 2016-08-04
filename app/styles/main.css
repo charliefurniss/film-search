@@ -1,25 +1,30 @@
 @font-face {
+    
     font-family: GT-Walsheim-Bold;
     src: url(../fonts/GT-Walsheim-Bold.woff);
+
 }
 
 @font-face {
+
     font-family: GT-Walsheim-Light;
     src: url(../fonts/GT-Walsheim-Light.woff);
+
 }
 
 @font-face {
+
     font-family: GT-Walsheim-Medium;
     src: url(../fonts/gt-walsheim-medium-web.woff);
-}
 
+}
 
 body {
     
     font-family: GT-Walsheim-Light;
 	color: #FFFFFF;
 	height: 100%;
-	background-color: #01D2BD;
+	background-color: #121C25;
 	background-size: cover;
 
 }
@@ -128,6 +133,12 @@ body {
 
 }
 
+#header {
+
+	margin-bottom: 90px;
+
+}
+
 #header-logo {
 
 	width: 50px;
@@ -143,12 +154,6 @@ body {
 
 }
 
-#header {
-
-	margin-bottom: 90px;
-
-}
-
 input[type="text"]:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus {
@@ -160,7 +165,7 @@ input[type="submit"]:focus {
 #results-container {
 
 	background-color: #01D2BD;
-	padding: 25px;
+	padding: 25px 25px 40px 25px;
 	overflow: scroll;
 	display: none;
 
@@ -288,7 +293,6 @@ input[type="submit"]:focus {
 
 #top-container {
 
-	background-color: #121C25;
 	padding: 40px;
 
 }
@@ -308,5 +312,137 @@ input[type="submit"]:focus {
 .type-series {
 
 	color: #ED164F;
+
+}
+
+@media screen and (max-width: 544px) {
+
+	#sort-by {
+
+		display: none;
+
+	}
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.film-info {
+
+		margin-left: 10px;
+		width: 70%;
+
+	}
+
+	#header {
+
+		margin-bottom: 60px;
+
+	}
+
+	#header-logo {
+
+		width: 34px;
+		height: 28px;
+
+	}
+
+	#header-title {
+
+		font-size: 12px;
+		margin-left: 7px;
+
+	}
+
+	#results-container {
+
+		padding: 10px 10px 25px 10px;
+
+	}
+
+	#results-head {
+
+	    font-size: 24px;
+	
+	}
+
+	#results-header {
+
+		padding-top: 25px;
+
+	}
+
+	.results-header-content {
+
+		font-size: 10px;
+		padding: 7px;
+
+	}
+
+	.search { 
+		
+		margin: 3px; 
+		background: url('../images/search-icon.png') no-repeat 18px 14px;
+		background-size: 12px;
+
+	}
+
+	#search-area, #title-container {
+
+		margin: 30px;
+
+	}
+
+	#search-border {
+
+		border-left: 0px;
+
+	}
+
+	#search-input {
+
+		width: 180px;
+		padding: 10px 10px 10px 35px;
+		border-top-right-radius: 50px;
+		border-bottom-right-radius: 50px;
+
+	}
+
+	#search-input,
+	#search-submit {
+
+		font-size: 13px;
+
+	}
+
+	#search-submit {
+
+		display: block;		
+		width: 180px;
+		margin: 20px auto 0;
+		padding: 10px;
+		border-top-left-radius: 50px;
+		border-bottom-left-radius: 50px;
+
+	}
+
+	#strapline {
+
+		font-size: 20px;
+
+	}
+
+	#title {
+
+		font-size: 36px;
+
+	}
+
+	#top-container {
+
+		padding: 25px;
+
+	}
 
 }
