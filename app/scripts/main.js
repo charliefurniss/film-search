@@ -25,7 +25,7 @@ $(document).ready(function () {
             });
 
             //call to API using string from the form
-            $.ajax('http://www.omdbapi.com/?s='+ value)
+            $.ajax('https://www.omdbapi.com/?s='+ value)
                 .done(function(_datas) {
                     //stores data from search in datas variable
                     datas = _datas.Search;
