@@ -41,13 +41,16 @@ $(document).ready(function () {
         }
 
         toggleColour(e);
-
         render();
     });
 
     function toggleColour(e) {
         $('#' + activeId + '-input').addClass('sort-active').removeClass('sort-button');
         $('#' + passiveId + '-input').removeClass('sort-active').addClass('sort-button');
+    }
+
+    function showResults() {
+        $('#results-container').slideDown("slow");
     }
 
     function sortDatas() {
@@ -77,13 +80,7 @@ $(document).ready(function () {
     function render() {
         datas && datas.length && sortDatas();
 
-        console.log(datas);
-
         $('.film-list').empty();
-
-        // $('.film-list li').on('click', function() {
-        //     $(this).find('div').slideToggle();
-        // });
 
         $.each(datas, function(index, data) {
             var typeClass = '';
@@ -110,5 +107,7 @@ $(document).ready(function () {
                 $(this).find('div.film-info').empty().append('<div class="film-imdbID">IMDB ID: ' + data.imdbID + '</div>');
             });
         });
+
+        showResults();
     }
 });

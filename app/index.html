@@ -9,50 +9,50 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
+        <div class="container-fluid">
+            <div id="top-container">
 
-        <div id="top-container">
+                <div id="header">
+                    <img class="header-content" id="header-logo" src="images/OMDb-logo.png"/>
+                    <h6 class="header-content" id="header-title">OMDb</h6>
+                </div>
 
-            <div id="header">
-                <img class="header-content" id="header-logo" src="images/OMDb-logo.png"/>
-                <h6 class="header-content" id="header-title">OMDb</h6>
+                <div id="title-container">
+                    <h1 id="title">OMDb</h1>
+                    <p id="strapline">The Open <span id="strap-highlight">Movie</span> Database.</p>
+                </div>    
+                <div id="search-area">
+                    <form id="search-form">
+                        <input class="search" id="search-input" type="text" placeholder="Search for anything right here, right now...">
+                        <span id="search-border"><input id="search-submit" type="submit" value="SEARCH"></span>
+                    </form>
+                </div>
             </div>
+        
+            <div id="results-container">
 
-            <div id="title-container">
-                <h1 id="title">OMDb</h1>
-                <p id="strapline">The Open <span id="strap-highlight">Movie</span> Database.</p>
-            </div>    
-            <div id="search-area">
-                <form id="search-form">
-                    <input class="search" id="search-input" type="text" placeholder="Search for anything right here, right now...">
-                    <span id="search-border"><input id="search-submit" type="submit" value="SEARCH"></span>
-                </form>
-            </div>
-        </div>
-    
-        <div id="results-container">
+                <div id="results-header">
 
-            <div id="results-header">
+                    <h2 id="results-head">Results</h2>
 
-                <h2 id="results-head">Results</h2>
+                    <div id="sort-container">
 
-                <div id="sort-container">
+                        <p class="results-header-content">SORT BY</p>
 
-                    <p class="results-header-content">SORT BY</p>
+                        <input class="results-header-content sort-active" id="title-input" type="button" name="sort-group" value="TITLE" checked="">
+                        
+                        
+                        <input class="results-header-content sort-button" id="date-input" type="button" name="sort-group" value="RELEASE YEAR">
 
-                    <input class="results-header-content sort-active" id="title-input" type="button" name="sort-group" value="TITLE" checked="">
-                    
-                    
-                    <input class="results-header-content sort-button" id="date-input" type="button" name="sort-group" value="RELEASE YEAR">
+                    </div>
 
                 </div>
 
+                <ul class="film-list">
+                </ul>
+
             </div>
-
-            <ul class="film-list">
-            </ul>
-
-        </div>
-
+        </div>    
         <script src="scripts/jquery-2.2.1.min.js"></script>
         <script src="scripts/main.js"></script>
     </body>
